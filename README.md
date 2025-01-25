@@ -1,17 +1,125 @@
-# Reset_Net
+<div align="center">
+</div>
+<a name="readme-top"></a>
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <h1>Reset Net</h1>
+  <a href="https://github.com/Erik-42">
+    <img src="assets/img/EPS.jpeg" alt="Logo Reset Net" width="150" height="150">
+  </a>
+</div>
+
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+<div align="center">
+
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Issues][issues-shield]][issues-url]<br/>
+Repo: [![wakatime](https://wakatime.com/badge/github/Erik-42/reset_net.svg)](https://wakatime.com/badge/github/Erik-42/reset_net)
+Project: [![wakatime](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/ead645fe-29fa-48bf-90a7-470e1baddf18.svg)](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/ead645fe-29fa-48bf-90a7-470e1baddf18)
+
+</div>
 Batch de manipulation des connexions réseaux
 
-Script de réinitialisation du réseau par Erik-42
+Reset Net est un utilitaire Windows simple mais puissant conçu pour résoudre rapidement les problèmes de connexion réseau courants. Cet outil automatise plusieurs commandes système essentielles en un seul clic, vous permettant de :
 
-[![wakatime](https://wakatime.com/badge/github/Erik-42/reset_net.svg)](https://wakatime.com/badge/github/Erik-42/reset_net)
+- Réinitialiser la pile TCP/IP
+- Nettoyer le cache DNS
+- Restaurer les paramètres Winsock
+- Redémarrer les adaptateurs réseau
+- Diagnostiquer les problèmes de connectivité
 
-[![wakatime](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/ead645fe-29fa-48bf-90a7-470e1baddf18.svg)](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/ead645fe-29fa-48bf-90a7-470e1baddf18)
+Idéal pour les administrateurs système, les techniciens informatiques ou tout utilisateur rencontrant des problèmes de connexion réseau.
+
+<p></p>
 
 
-Voici une version optimisée de votre script avec des messages de succès ou d'échec pour chaque opération clé (configuration de l'adresse IP, de la passerelle, et des DNS).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Optimisations ajoutées :
-Messages de réussite ou d'échec : Chaque action réseau (configuration d'IP, de passerelle, et de DNS) est suivie d'un message indiquant si l'opération a réussi ou échoué. Cela est contrôlé par %ERRORLEVEL% qui vérifie si la dernière commande a été exécutée avec succès.
-Simplification et clarté : Les messages sont clairs et adaptés à chaque étape du script pour faciliter le débogage en cas de problème.
-Boucle pour toutes les interfaces : Toutes les cartes réseau connectées sont détectées, et les paramètres réseau sont appliqués automatiquement.
-Ce script permet de configurer plusieurs cartes réseaux tout en vérifiant le bon déroulement des opérations.
+## Utilisation
+
+1. **Téléchargement**
+   - Téléchargez le fichier batch (.bat) depuis ce dépôt
+   - Ou clonez le dépôt : `git clone https://github.com/Erik-42/reset_net.git`
+
+2. **Exécution**
+   - Double-cliquez sur le fichier .bat
+   - Ou exécutez-le en tant qu'administrateur pour de meilleurs résultats
+
+3. **Fonctionnalités**
+   - Réinitialise les paramètres TCP/IP
+   - Vide le cache DNS
+   - Réinitialise le Winsock
+   - Redémarre les adaptateurs réseau
+   - Affiche un rapport de statut à la fin
+
+⚠️ **Note importante** : L'exécution en tant qu'administrateur est recommandée pour un fonctionnement optimal.
+
+## Testez le projet
+
+Github: [https://github.com/Erik-42/reset_net](https://https://github.com/Erik-42/reset_net)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## License
+
+Distributed under the GNU GENERAL PUBLIC LICENSE
+Version 3.<br>
+See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contact
+
+<div align="center">
+
+[![GitHub followers][github followers-shield]][github followers-url]
+[![Stargazers][stars-shield]][stars-url]
+[![GitHub repo][github repo-shield]][github repo-url]
+[![wakatime](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5.svg)](https://wakatime.com/@f84d00d8-fee3-4ca3-803d-3daa3c7053a5)
+
+[![Github Badge][github badge-shield]][github badge-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+<a href = 'https://basillecorp.dev'> <img width = '32px' align= 'center' src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/portfolio.png"/> basillecorp.dev</a>
+
+mesen.erik@gmail.com
+
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[wakatime-shield]: https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5.svg
+[wakatime-url]: https://wakatime.com/@f84d00d8-fee3-4ca3-803d-3daa3c7053a5
+[github badge-shield]: https://img.shields.io/badge/Github-Erik--42-155?style=for-the-badge&logo=github
+[github badge-url]: https://github.com/Erik-42
+[github repo-shield]: https://img.shields.io/badge/Repositories-68-blue
+[github repo-url]: https://github.com/Erik-42/Erik-42?tab=repositories
+[github followers-shield]: https://img.shields.io/github/followers/Erik-42
+[github followers-url]: https://github.com/followers/Erik-42
+[contributors-shield]: https://img.shields.io/github/contributors/Erik-42/export-project-structure
+[contributors-url]: https://github.com/Erik-42/export-project-structure/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Erik-42/reset_net
+[forks-url]: https://github.com/Erik-42/reset_net/forks
+[issues-shield]: https://img.shields.io/github/issues-raw/Erik-42/reset_net
+[issues-url]: https://github.com/Erik-42/reset_net/issues
+[stars-shield]: https://img.shields.io/github/stars/Erik-42
+[stars-url]: https://github.com/Erik-42?tab=stars
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/erik-mesen/
+[html-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[html-url]: https://html.spec.whatwg.org/
+[css-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[css-url]: https://www.w3.org/TR/CSS/#css
+[javascript-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555

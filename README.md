@@ -23,10 +23,10 @@
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]<br/>
 Repo: [![wakatime](https://wakatime.com/badge/github/Erik-42/reset_net.svg)](https://wakatime.com/badge/github/Erik-42/reset_net)
-Project: [![wakatime](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/ead645fe-29fa-48bf-90a7-470e1baddf18.svg)](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/ead645fe-29fa-48bf-90a7-470e1baddf18)
+Project: [![wakatime](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/840d2784-7d31-4355-b766-dabdf8fa2f01.svg)](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/840d2784-7d31-4355-b766-dabdf8fa2f01)
 
 </div>
-Batch de manipulation des connexions réseaux
+Reset_Net est un batch de manipulation des connexions réseaux
 
 Reset Net est un utilitaire Windows simple mais puissant conçu pour résoudre rapidement les problèmes de connexion réseau courants. Cet outil automatise plusieurs commandes système essentielles en un seul clic, vous permettant de :
 

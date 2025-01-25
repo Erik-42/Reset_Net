@@ -6,8 +6,8 @@
 <br />
 <div align="center">
   <h1>Reset Net</h1>
-  <a href="https://github.com/Erik-42">
-    <img src="assets/img/EPS.jpeg" alt="Logo Reset Net" width="150" height="150">
+  <a href="https://github.com/Erik-42/reset_net">
+    <img src="./assets/logo/logo-Reset_Net.webp" alt="Logo Reset Net" width="150" height="150">
   </a>
 </div>
 
@@ -23,20 +23,22 @@
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]<br/>
 Repo: [![wakatime](https://wakatime.com/badge/github/Erik-42/reset_net.svg)](https://wakatime.com/badge/github/Erik-42/reset_net)
+
 Project: [![wakatime](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/840d2784-7d31-4355-b766-dabdf8fa2f01.svg)](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/840d2784-7d31-4355-b766-dabdf8fa2f01)
 
 </div>
 Reset_Net est un batch de manipulation des connexions réseaux
 
-Reset Net est un utilitaire Windows simple mais puissant conçu pour résoudre rapidement les problèmes de connexion réseau courants. Cet outil automatise plusieurs commandes système essentielles en un seul clic, vous permettant de :
+Reset Net est un utilitaire Windows simple mais puissant conçu pour résoudre rapidement les problèmes de connexion réseau courants. Cet outil automatise plusieurs commandes système essentielles en un seul clic, permettant de :
 
 - Réinitialiser la pile TCP/IP
 - Nettoyer le cache DNS
 - Restaurer les paramètres Winsock
 - Redémarrer les adaptateurs réseau
 - Diagnostiquer les problèmes de connectivité
+- Générer des rapports de diagnostic
 
-Idéal pour les administrateurs système, les techniciens informatiques ou tout utilisateur rencontrant des problèmes de connexion réseau.
+Idéal pour les administrateurs système, les techniciens informatiques et tout utilisateur rencontrant des problèmes de connexion réseau.
 
 <p></p>
 
@@ -51,20 +53,25 @@ Idéal pour les administrateurs système, les techniciens informatiques ou tout 
 
 2. **Exécution**
    - Double-cliquez sur le fichier .bat
-   - Ou exécutez-le en tant qu'administrateur pour de meilleurs résultats
+   - Ou exécutez-le en tant qu'administrateur (recommandé)
 
 3. **Fonctionnalités**
    - Réinitialise les paramètres TCP/IP
    - Vide le cache DNS
    - Réinitialise le Winsock
    - Redémarre les adaptateurs réseau
-   - Affiche un rapport de statut à la fin
+   - Génère un rapport de statut détaillé
+   - Affiche les informations de diagnostic réseau
+   - Vérifie la connectivité Internet
 
-⚠️ **Note importante** : L'exécution en tant qu'administrateur est recommandée pour un fonctionnement optimal.
+⚠️ **Note importante** : 
+- L'exécution en tant qu'administrateur est requise pour un fonctionnement optimal
+- Une connexion Internet active n'est pas nécessaire pour l'utilisation basique
+- Un redémarrage du système peut être nécessaire après l'utilisation
 
 ## Testez le projet
 
-Github: [https://github.com/Erik-42/reset_net](https://https://github.com/Erik-42/reset_net)
+Github: [https://github.com/Erik-42/reset_net](https://github.com/Erik-42/reset_net)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -36,7 +36,8 @@ Reset Net est un utilitaire Windows simple mais puissant conçu pour résoudre r
 - Restaurer les paramètres Winsock
 - Redémarrer les adaptateurs réseau
 - Diagnostiquer les problèmes de connectivité
-- Générer des rapports de diagnostic
+- Générer des rapports de diagnostic détaillés avec historique
+- Exporter les configurations réseau complètes
 
 Idéal pour les administrateurs système, les techniciens informatiques et tout utilisateur rencontrant des problèmes de connexion réseau.
 
@@ -63,6 +64,7 @@ Idéal pour les administrateurs système, les techniciens informatiques et tout 
    - Génère un rapport de statut détaillé
    - Affiche les informations de diagnostic réseau
    - Vérifie la connectivité Internet
+   - Exporte un rapport complet au format texte
 
 ⚠️ **Note importante** : 
 - L'exécution en tant qu'administrateur est requise pour un fonctionnement optimal

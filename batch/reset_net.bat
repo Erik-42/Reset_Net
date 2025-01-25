@@ -47,6 +47,12 @@ set "dns2=1.0.0.1"         :: CloudFlare Secondary DNS
 
 :: --- Affichage de la configuration réseau actuelle ---
 :infoNetworkUser
+echo ========================================
+echo =       Reset_Net par Erik-42          =
+echo =       reset computer network         =
+echo = https://github.com/Erik-42/reset_net =
+echo ========================================
+echo.
 echo Configuration réseau actuelle:
 for /f "tokens=2 delims=:" %%a in ('ipconfig ^| find "Carte"') do echo Carte: %%a
 for /f "tokens=2 delims=:" %%a in ('ipconfig ^| find "IPv4"') do echo IP: %%a
@@ -55,6 +61,41 @@ for /f "tokens=2 delims=:" %%a in ('ipconfig ^| find "Passerelle"') do echo Pass
 for /f "tokens=2 delims=:" %%a in ('ipconfig ^| find "DNS"') do echo DNS: %%a
 echo.
 
+echo Que souhaitez-vous faire ?
+echo 1. Afficher le menu principal
+echo 2. Exporter la configuration actuelle dans un rapport
+choice /C 12 /N /M "Votre choix (1 ou 2) : "
+
+if errorlevel 2 (
+    goto generateQuickReport
+) else (
+    goto mainMenu
+)
+
+:: --- Générer un rapport rapide de la configuration actuelle ---
+:generateQuickReport
+call :debugMsg "Génération du rapport rapide"
+set "desktop=%USERPROFILE%\Desktop"
+set "timestamp=%date:~6,4%-%date:~3,2%-%date:~0,2%_%time:~0,2%-%time:~3,2%-%time:~6,2%"
+set "timestamp=%timestamp: =0%"
+set "reportFile=%desktop%\config_reseau_%timestamp%.txt"
+
+if "%MODE_SIMULATION%"=="1" (
+    echo %SIMULATION_PREFIX%Simulation de génération du rapport rapide
+    echo %SIMULATION_PREFIX%Le rapport serait créé ici: %reportFile%
+) else (
+    echo Génération du rapport en cours...
+    echo ===== CONFIGURATION RESEAU ACTUELLE ===== > "%reportFile%"
+    echo Date et heure: %date% %time% >> "%reportFile%"
+    echo. >> "%reportFile%"
+    ipconfig /all >> "%reportFile%"
+    echo Rapport généré avec succès: %reportFile%
+)
+
+echo.
+echo Appuyez sur une touche pour continuer vers le menu principal...
+pause >nul
+goto mainMenu
 
 :: --- Menus ---
 :mainMenu
@@ -72,6 +113,7 @@ echo 6. Effacer les IP DNS
 echo 7. Modifier les IP DNS IPV4
 echo 8. Passer en IP Fixe IPV6 (Statique)
 echo 9. Modifier les IP DNS IPV6
+echo 96. Générer un rapport réseau complet
 echo 97. Activer/Désactiver mode debug
 echo 98. Activer/Désactiver mode simulation
 echo 99. Quitter
@@ -88,6 +130,7 @@ if "%choix%"=="6" goto OffNet
 if "%choix%"=="7" goto OffDNS
 if "%choix%"=="8" goto IPfixeIPV6
 if "%choix%"=="9" goto IPDNSIPV6
+if "%choix%"=="96" goto generateReport
 if "%choix%"=="97" goto toggleDebug
 if "%choix%"=="98" goto toggleSimulation
 if "%choix%"=="99" goto fin
@@ -278,3 +321,46 @@ if "%DEBUG_MODE%"=="1" (
     echo %DEBUG_PREFIX%%~1
 )
 goto :eof
+
+:: --- Générer un rapport réseau complet ---
+:generateReport
+call :debugMsg "Génération du rapport réseau"
+set "desktop=%USERPROFILE%\Desktop"
+set "timestamp=%date:~6,4%-%date:~3,2%-%date:~0,2%_%time:~0,2%-%time:~3,2%-%time:~6,2%"
+set "timestamp=%timestamp: =0%"
+set "reportFile=%desktop%\rapport_reseau_%timestamp%.txt"
+
+if "%MODE_SIMULATION%"=="1" (
+    echo %SIMULATION_PREFIX%Simulation de génération du rapport réseau
+    echo %SIMULATION_PREFIX%Le rapport serait créé ici: %reportFile%
+) else (
+    echo Génération du rapport réseau en cours...
+    echo ===== RAPPORT RESEAU RESET_NET ===== > "%reportFile%"
+    echo Date et heure: %date% %time% >> "%reportFile%"
+    echo. >> "%reportFile%"
+    
+    echo === CONFIGURATION IP === >> "%reportFile%"
+    ipconfig /all >> "%reportFile%"
+    echo. >> "%reportFile%"
+    
+    echo === ROUTES === >> "%reportFile%"
+    route print >> "%reportFile%"
+    echo. >> "%reportFile%"
+    
+    echo === DNS CACHE === >> "%reportFile%"
+    ipconfig /displaydns >> "%reportFile%"
+    echo. >> "%reportFile%"
+    
+    echo === STATISTIQUES RESEAU === >> "%reportFile%"
+    netstat -e >> "%reportFile%"
+    echo. >> "%reportFile%"
+    
+    echo === TEST DE CONNECTIVITE === >> "%reportFile%"
+    ping 8.8.8.8 -n 4 >> "%reportFile%"
+    ping www.google.com -n 4 >> "%reportFile%"
+    
+    echo Rapport généré avec succès: %reportFile%
+)
+
+timeout /t 3
+goto mainMenu
